@@ -6,8 +6,16 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-     
+    <div className="body">
+     <main>
+     <h1>A Simple URL Shortener</h1>
+     <div className="inputbtn">
+      <input type="text" placeholder='Input URL hear to be shorten'/>
+      <button>Click</button>
+     </div>
+
+     <div className="result"></div>
+     </main>
     </div>
   )
 }

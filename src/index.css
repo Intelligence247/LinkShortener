@@ -2,3 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    @apply lg:text-base  text-sm m-0 p-0 box-border
+}
+
+.body{
+    @apply bg-[#A9E4F2] w-screen h-screen grid place-items-center
+}
+
+main{
+    @apply bg-[#febae9] lg:w-[60%] lg:h-[70%] h-[90%] w-[90%] flex flex-col items-center justify-center gap-10
+}
+main h1{
+    @apply text-[2.5rem] font-serif
+}
+input{
+    @apply bg-[#eaeef1] h-8 block w-[20rem] pl-2 outline-none rounded-l-lg 
+}
+input::placeholder{
+@apply pl-0.5
+}
+button{
+    @apply bg-white px-8 rounded-r-lg hover:bg-[#39ba39] hover:text-white font-[500]
+}
+.inputbtn{
+    @apply flex gap-0 
+}
+
+.result{
+@apply bg-[#A9E4F2] w-[80%] h-[12rem] rounded-lg shadow-md shadow-black
+}
+/* #febae9 */
