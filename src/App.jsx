@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [shorturl, setShorturl] = useState('')
 
   return (
     <div className="body">
@@ -14,10 +14,18 @@ function App() {
       <button>Click</button>
      </div>
 
-     <div className="result"></div>
+     <div className="result">
+      <img src="" alt="" />
+      <div className="answer"></div>
+      <button><img src="/media/copy.png" alt="" /></button>
+     </div>
      </main>
     </div>
   )
 }
 
 export default App
+
+
+// https://dev.to/amissah17/how-to-build-a-link-shortening-app-with-react-and-bitly-api-4poe
+// https://dev.bitly.com/api-reference/#createBitlink

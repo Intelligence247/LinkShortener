@@ -30,6 +30,21 @@ button{
 }
 
 .result{
-@apply bg-[#A9E4F2] w-[80%] h-[12rem] rounded-lg shadow-md shadow-black
+@apply bg-[#A9E4F2] w-[80%] h-[12rem] rounded-lg shadow-md shadow-black flex justify-center items-center 
 }
+
+.result button{
+    @apply bg-transparent w-10 h-10 flex items-center justify-center
+}
+.result button img{
+    @apply w-8 h-8 bg-gray-500
+}
+.result > img{
+    @apply w-[5rem] h-[5rem] mr-10
+}
+
+.result .answer{
+    @apply w-full h-10 bg-blue-500
+}
+
 /* #febae9 */
