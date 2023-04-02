@@ -8,7 +8,7 @@
 - React
 - TailwindCss
 ## Preview here
-[Go Live](9qr.de/2C419x)
+[Go Live](https://tranquil-sunburst-a4ee59.netlify.app)
 
 ![screenshot](/public/media/sketch.png)
 
