@@ -6,8 +6,9 @@ import './App.css'
 function App() {
   const [shorturl, setShorturl] = useState('')
   const [long_url, setLong_url] = useState('')
-  const [active, setactive] = useState('')
   const [copy, setcopy] = useState(false)
+  const [errM, seterrM] = useState('')
+
   
   const url = `https://api.shrtco.de/v2/shorten?url=${long_url}`;
   const handleInputs=(e)=>{
@@ -16,17 +17,18 @@ setLong_url(e.target.value)
   }
   
 const handleClick=(e)=>{
+  
   fetch (url)
   .then((res)=>res.json())
   .then((datum)=>{
   setShorturl(datum.result.short_link2)
-  setactive(datum.ok)
+  // setactive(datum.ok)
 }
   
   )
   .catch((err)=>console.log(err))
+  seterrM(long_url.length<1 ?'Inputbox must not be empty':long_url.length>1 && shorturl.length<1?'The URL you entered is invalid':long_url.length>1 && shorturl.length>1?'':'')
 }
-console.log(active)
 useEffect(() => {
   handleClick()
   }, []);
@@ -55,10 +57,10 @@ const timeover= setTimeout(() => {
       />
       <button 
       onClick={(e)=>handleClick(e)}
-      >Generate</button>
+      >Shortify</button>
 
      </div>
-     <div className="error"></div>
+     <div className="error">{errM}</div>
      </div>
 
      <div className="result">
@@ -72,9 +74,9 @@ text={shorturl}>
         </CopyToClipboard>
      </div>
 
-     <div className={`efficiency ${shorturl.length>1 && long_url.length>1?'block':'hidden'}`}>
+     <div className={`efficiency ${(shorturl.length>1 && long_url.length)&& 'effV'}`}>
       <p>Pasted URL Length: <span>{long_url.length}</span></p>
-      <p>Generated URL Length: <span>{shorturl.length}</span></p>
+      <p>Shortified URL Length: <span>{shorturl.length}</span></p>
       <p>Percentage Efficiency: <span>{eff.toFixed(2)}</span>%</p>
      </div>
      </main>

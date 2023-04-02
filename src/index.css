@@ -54,11 +54,13 @@ button{
     @apply bg-green-300
 }
 
-.efficiency{
-    @apply text-green-700 h-[6rem] w-full flex flex-col items-center justify-center w-max gap-1
+main .efficiency{
+    @apply text-green-700 h-[6rem] w-full flex flex-col items-center justify-center w-max gap-1 hidden
 }
-.efficiency p,.efficiency p span{
+main .efficiency p,.efficiency p span{
     @apply text-[1.3rem]
 }
-
+main .effV{
+    @apply block
+}
 /* #febae9 */
