@@ -23,7 +23,7 @@ input::placeholder{
 @apply pl-0.5
 }
 button.btnSh {
-    @apply bg-white lg:px-8 px-6 lg:py-0 py-2 rounded-r-lg hover:bg-[#39ba39] hover:text-white font-[500] lg:mt-0 mt-5 lg:rounded-l-[0] rounded-l-lg w-max 
+    @apply bg-white lg:px-8 px-6 lg:py-1 py-2 rounded-r-lg hover:bg-[#39ba39] hover:text-white font-[500] lg:mt-0 mt-5 lg:rounded-l-[0] rounded-l-lg w-max 
 }
 .inputbtnerr{
     @apply flex flex-col justify-center items-center gap-2

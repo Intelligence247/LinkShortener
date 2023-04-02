@@ -17,7 +17,7 @@ setLong_url(e.target.value)
   }
   
 const handleClick=(e)=>{
-  seterrM(long_url.length<1 ?'Inputbox must not be empty':long_url.length>1 && shorturl.length<1?'The URL you entered is invalid':long_url.length>1 && shorturl.length>1?'':'')
+  // seterrM(long_url.length<1 ?'Inputbox must not be empty':long_url.length>1 && shorturl.length<1?'The URL you entered is invalid':long_url.length>1 && shorturl.length>1?'':'')
   fetch (url)
   .then((res)=>res.json())
   .then((datum)=>{
