@@ -11,19 +11,25 @@
 }
 
 main{
-    @apply bg-[#febae9] lg:w-[60%] lg:h-[70%] h-[90%] w-[90%] flex flex-col items-center justify-center gap-10
+    @apply bg-[#febae9] lg:w-[70%] lg:h-[33rem] h-[90%] w-[90%] flex flex-col items-center justify-center gap-6 rounded-xl
 }
 main h1{
     @apply text-[2.5rem] font-serif
 }
 input{
-    @apply bg-[#eaeef1] h-8 block w-[20rem] pl-2 outline-none rounded-l-lg 
+    @apply bg-[#eaeef1] h-8 block w-[25rem] px-2 outline-none rounded-l-lg 
 }
 input::placeholder{
 @apply pl-0.5
 }
 button{
     @apply bg-white px-8 rounded-r-lg hover:bg-[#39ba39] hover:text-white font-[500]
+}
+.inputbtnerr{
+    @apply flex flex-col justify-center items-center gap-2
+}
+.error{
+    @apply w-max h-6 flex justify-center items-center
 }
 .inputbtn{
     @apply flex gap-0 
@@ -34,7 +40,7 @@ button{
 }
 
 .result button{
-    @apply bg-transparent p-0 border-blue-900 border-[1px] h-10 w-20 flex justify-center items-center
+    @apply bg-transparent p-0 border-blue-900 border-[1px] h-10 w-20 flex justify-center items-center bg-gray-500
 }
 .result button >img{
     @apply w-6 h-6 block
@@ -42,7 +48,17 @@ button{
 
 
 .result .answer{
-    @apply w-full h-10 bg-blue-500 text-white
+    @apply w-full h-10 bg-blue-500 text-white flex justify-center items-center rounded-l-xl
+}
+.result .copiedbtn{
+    @apply bg-green-300
+}
+
+.efficiency{
+    @apply text-green-700 h-[6rem] w-full flex flex-col items-center justify-center w-max gap-1
+}
+.efficiency p,.efficiency p span{
+    @apply text-[1.3rem]
 }
 
 /* #febae9 */
