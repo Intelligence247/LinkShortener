@@ -10,7 +10,7 @@
 ## Preview here
 [Go Live](https://tranquil-sunburst-a4ee59.netlify.app)
 
-![screenshot](/public/media/sketch2g.png)
+![screenshot](/public/media/sketch2.png)
 
 ## Contact
 If you want to contact me you can reach me at
