@@ -17,7 +17,7 @@ setLong_url(e.target.value)
   }
   
 const handleClick=(e)=>{
-  
+  seterrM(long_url.length<1 ?'Inputbox must not be empty':long_url.length>1 && shorturl.length<1?'The URL you entered is invalid':long_url.length>1 && shorturl.length>1?'':'')
   fetch (url)
   .then((res)=>res.json())
   .then((datum)=>{
@@ -27,7 +27,7 @@ const handleClick=(e)=>{
   
   )
   .catch((err)=>console.log(err))
-  seterrM(long_url.length<1 ?'Inputbox must not be empty':long_url.length>1 && shorturl.length<1?'The URL you entered is invalid':long_url.length>1 && shorturl.length>1?'':'')
+
 }
 useEffect(() => {
   handleClick()
@@ -52,11 +52,12 @@ const timeover= setTimeout(() => {
      <h1>A Simple URL Shortener</h1>
      <div className="inputbtnerr">
      <div className="inputbtn">
-      <input type="text" placeholder='Input URL hear to be shorten'
+      <input type="text" placeholder='Input URL to be shorten'
       onChange={(e)=>handleInputs(e)}
       />
       <button 
       onClick={(e)=>handleClick(e)}
+      className='btnSh'
       >Shortify</button>
 
      </div>
