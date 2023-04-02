@@ -30,21 +30,19 @@ button{
 }
 
 .result{
-@apply bg-[#A9E4F2] w-[80%] h-[12rem] rounded-lg shadow-md shadow-black flex justify-center items-center 
+@apply bg-[#A9E4F2] w-[80%] h-[12rem] rounded-lg shadow-md shadow-black flex justify-center items-center px-10
 }
 
 .result button{
-    @apply bg-transparent w-10 h-10 flex items-center justify-center
+    @apply bg-transparent p-0 border-blue-900 border-[1px] h-10 w-20 flex justify-center items-center
 }
-.result button img{
-    @apply w-8 h-8 bg-gray-500
-}
-.result > img{
-    @apply w-[5rem] h-[5rem] mr-10
+.result button >img{
+    @apply w-6 h-6 block
 }
 
+
 .result .answer{
-    @apply w-full h-10 bg-blue-500
+    @apply w-full h-10 bg-blue-500 text-white
 }
 
 /* #febae9 */
