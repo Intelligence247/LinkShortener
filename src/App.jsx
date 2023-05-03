@@ -21,14 +21,14 @@ setLong_url(e.target.value)
 
 
 const handleClick=()=>{
-  seterrM(long_url.length<1 ?'Inputbox must not be empty':long_url.length>1 && shorturl.length<1?'The URL you entered is invalid':long_url.length>1 && shorturl.length>1?'':'')
+  seterrM(long_url.length<1 ?'Inputbox must not be empty':'')
 
 }
 useEffect(() => {
   fetch (url)
   .then((res)=>res.json())
   .then((datum)=>{
-  setShorturl(datum.result.short_link2)
+  setShorturl(datum.result.short_link3)
 
 })
   .catch((err)=>console.log(err))
@@ -82,7 +82,7 @@ text={shorturl}>
      <div className={`efficiency ${(shorturl.length>1 && long_url.length)&& 'effV'}`}>
       <p>Pasted URL Length: <span>{long_url.length}</span></p>
       <p>Shortified URL Length: <span>{shorturl.length}</span></p>
-      <p>Percentage Efficiency: <span>{eff.toFixed(2)}</span>%</p>
+      <p>Efficiency: <span>{eff.toFixed(2)}</span>%</p>
      </div>
      </main>
     </div>
@@ -92,5 +92,3 @@ text={shorturl}>
 export default App
 
 
-//  https://dev.to/amissah17/how-to-build-a-link-shortening-app-with-react-and-bitly-api-4poe
-// https://dev.bitly.com/api-reference/#createBitlink
